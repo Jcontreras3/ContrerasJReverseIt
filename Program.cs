@@ -42,7 +42,11 @@ while (playAgain == "yes")
 
     Console.WriteLine("Now enter a word or letters and see it get reversed!");
     word = Console.ReadLine();
-
+    while(string.IsNullOrEmpty(word))
+    {
+        Console.WriteLine("You didn't enter anything please enter a word to reverse.");
+        word = Console.ReadLine();
+    }
     for (int i = word.Length - 1; i >= 0; i--)
     {
         reverseStr = reverseStr + word[i];
